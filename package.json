@@ -1,0 +1,20 @@
+{
+  "name": "perpscope",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Read-only dreamDEX perp market conformance scanner and evidence generator.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "scan": "node src/cli.js scan",
+    "test": "node --test",
+    "test:coverage": "node --test --experimental-test-coverage --test-coverage-lines=80 --test-coverage-functions=80 --test-coverage-branches=80 --test-coverage-include=src/*.js --test-coverage-exclude=src/sdk-adapter.js --test-coverage-exclude=src/cli.js",
+    "check": "npm run test:coverage"
+  },
+  "dependencies": {
+    "@somnia-chain/markets-sdk": "^0.31.0",
+    "viem": "^2.21.0"
+  }
+}
